@@ -10,16 +10,28 @@ An Arduino library for controlling and reading analog joystick modules.
 - Detect when the joystick is in the center.
 - Normalize axis values to custom ranges.
 
-## Installation
+## Installation via ZIP
 
-1. Download or clone this repository.
-2. Place the `Joystick` folder inside your Arduino `libraries` directory.
-3. Restart the Arduino IDE.
-4. Include the library in your sketch:
+1. Download this repository as a ZIP file:
+   - Click the green **Code** button on GitHub.
+   - Select **Download ZIP**.
+
+2. Open the Arduino IDE.
+
+3. Navigate to:
+   **Sketch → Include Library → Add .ZIP Library...**
+
+4. Select the downloaded `Joystick.zip` file.
+
+5. Wait for the installation to finish.
+
+6. Include the library in your sketch:
 
 ```cpp
 #include <Joystick.h>
 ```
+
+The library is now ready to use!
 
 ## Wiring
 
