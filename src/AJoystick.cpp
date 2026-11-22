@@ -1,5 +1,5 @@
 
-#include "Joystick.h"
+#include "AJoystick.h"
 
 Joystick::Joystick(int pinX, int pinY, int pinButton)
   : _pinX(pinX),
