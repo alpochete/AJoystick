@@ -1,4 +1,4 @@
-# Joystick Library
+# AJoystick Library
 
 An Arduino library for controlling and reading analog joystick modules.
 
@@ -21,14 +21,14 @@ An Arduino library for controlling and reading analog joystick modules.
 3. Navigate to:
    **Sketch → Include Library → Add .ZIP Library...**
 
-4. Select the downloaded `Joystick.zip` file.
+4. Select the downloaded `AJoystick.zip` file.
 
 5. Wait for the installation to finish.
 
 6. Include the library in your sketch:
 
 ```cpp
-#include <Joystick.h>
+#include <AJoystick.h>
 ```
 
 The library is now ready to use!
@@ -46,7 +46,7 @@ The library is now ready to use!
 ## Basic Usage
 
 ```cpp
-#include <Joystick.h>
+#include <AJoystick.h>
 
 #define PIN_X A0
 #define PIN_Y A1
@@ -124,10 +124,10 @@ void loop() {
 ## Project Structure
 
 ```text
-Joystick/
+AJoystick/
 ├── src/
-│   ├── Joystick.h
-│   └── Joystick.cpp
+│   ├── AJoystick.h
+│   └── AJoystick.cpp
 ├── examples/
 │   └── BasicUsage/
 │       └── BasicUsage.ino
@@ -138,7 +138,7 @@ Joystick/
 
 ## Version
 
-**1.0.0**
+**1.1.0**
 
 
 
