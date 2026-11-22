@@ -1,6 +1,6 @@
 
-#ifndef JOYSTICK_H
-#define JOYSTICK_H
+#ifndef AJOYSTICK_H
+#define AJOYSTICK_H
 
 #include <Arduino.h>
 
