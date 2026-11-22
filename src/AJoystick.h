@@ -4,7 +4,7 @@
 
 #include <Arduino.h>
 
-class Joystick {
+class AJoystick {
 
 private:
   int _pinX;
@@ -17,7 +17,7 @@ private:
   bool _button;
 
 public:
-  Joystick(int pinX, int pinY, int pinButton);
+  AJoystick(int pinX, int pinY, int pinButton);
 
   void begin();
   void update();
