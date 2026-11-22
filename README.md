@@ -10,29 +10,15 @@ An Arduino library for controlling and reading analog joystick modules.
 - Detect when the joystick is in the center.
 - Normalize axis values to custom ranges.
 
-## Installation via ZIP
+## Installation
 
-1. Download this repository as a ZIP file:
-   - Click the green **Code** button on GitHub.
-   - Select **Download ZIP**.
+In the Arduino IDE, open **Tools > Manage Libraries...** (or click the Library Manager icon), search for **AButton**, and click **Install**.
 
-2. Open the Arduino IDE.
-
-3. Navigate to:
-   **Sketch → Include Library → Add .ZIP Library...**
-
-4. Select the downloaded `AJoystick.zip` file.
-
-5. Wait for the installation to finish.
-
-6. Include the library in your sketch:
+Then include the library in your sketch:
 
 ```cpp
-#include <AJoystick.h>
+#include <AButton.h>
 ```
-
-The library is now ready to use!
-
 ## Wiring
 
 | Joystick Pin | Arduino Pin |
