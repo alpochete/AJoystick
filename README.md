@@ -12,7 +12,7 @@ An Arduino library for controlling and reading analog joystick modules.
 
 ## Installation
 
-In the Arduino IDE, open **Tools > Manage Libraries...** (or click the Library Manager icon), search for **AButton**, and click **Install**.
+In the Arduino IDE, open **Tools > Manage Libraries...** (or click the Library Manager icon), search for **AJoystick**, and click **Install**.
 
 Then include the library in your sketch:
 
