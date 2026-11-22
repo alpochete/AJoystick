@@ -17,7 +17,7 @@ In the Arduino IDE, open **Tools > Manage Libraries...** (or click the Library M
 Then include the library in your sketch:
 
 ```cpp
-#include <AButton.h>
+#include <AJoystick.h>
 ```
 ## Wiring
 
