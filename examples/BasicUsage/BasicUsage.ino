@@ -1,5 +1,5 @@
 
-#include <Joystick.h>
+#include <AJoystick.h>
 
 #define PIN_X A0
 #define PIN_Y A1
