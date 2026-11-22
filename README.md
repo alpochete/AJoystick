@@ -52,7 +52,7 @@ The library is now ready to use!
 #define PIN_Y A1
 #define PIN_BUTTON 2
 
-Joystick joystick(PIN_X, PIN_Y, PIN_BUTTON);
+AJoystick joystick(PIN_X, PIN_Y, PIN_BUTTON);
 
 void setup() {
     Serial.begin(9600);
@@ -138,7 +138,7 @@ AJoystick/
 
 ## Version
 
-**1.0.1**
+**1.0.2**
 
 
 
