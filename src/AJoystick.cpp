@@ -1,7 +1,7 @@
 
 #include "AJoystick.h"
 
-Joystick::Joystick(int pinX, int pinY, int pinButton)
+AJoystick::AJoystick(int pinX, int pinY, int pinButton)
   : _pinX(pinX),
     _pinY(pinY),
     _pinButton(pinButton),
@@ -9,56 +9,56 @@ Joystick::Joystick(int pinX, int pinY, int pinButton)
     _y(512),
     _button(false) {}
 
-void Joystick::begin() {
+void AJoystick::begin() {
   pinMode(_pinX, INPUT);
   pinMode(_pinY, INPUT);
   pinMode(_pinButton, INPUT_PULLUP);
 }
 
-void Joystick::update() {
+void AJoystick::update() {
   _x = analogRead(_pinX);
   _y = analogRead(_pinY);
 
   _button = !digitalRead(_pinButton);
 }
 
-int Joystick::getX() const {
+int AJoystick::getX() const {
   return _x;
 }
 
-int Joystick::getY() const {
+int AJoystick::getY() const {
   return _y;
 }
 
-bool Joystick::getButton() const {
+bool AJoystick::getButton() const {
   return _button;
 }
 
-int Joystick::normalizeX(int start, int end) const {
+int AJoystick::normalizeX(int start, int end) const {
   return map(_x, 0, 1023, start, end);
 }
 
-int Joystick::normalizeY(int start, int end) const {
+int AJoystick::normalizeY(int start, int end) const {
   return map(_y, 0, 1023, start, end);
 }
 
-bool Joystick::up() const {
+bool AJoystick::up() const {
   return _y > 600;
 }
 
-bool Joystick::down() const {
+bool AJoystick::down() const {
   return _y < 400;
 }
 
-bool Joystick::left() const {
+bool AJoystick::left() const {
   return _x < 400;
 }
 
-bool Joystick::right() const {
+bool AJoystick::right() const {
   return _x > 600;
 }
 
-bool Joystick::center() const {
+bool AJoystick::center() const {
   return _x > 400 && _x < 600 &&
          _y > 400 && _y < 600;
 }
