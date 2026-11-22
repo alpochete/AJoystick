@@ -1,11 +1,10 @@
-
 #include <AJoystick.h>
 
 #define PIN_X A0
 #define PIN_Y A1
 #define PIN_BUTTON 2
 
-Joystick joystick(PIN_X, PIN_Y, PIN_BUTTON);
+AJoystick joystick(PIN_X, PIN_Y, PIN_BUTTON);
 
 void setup() {
   Serial.begin(9600);
