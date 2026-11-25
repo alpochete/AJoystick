@@ -1,10 +1,11 @@
 
 #include "AJoystick.h"
 
-AJoystick::AJoystick(int pinX, int pinY, int pinButton)
+AJoystick::AJoystick(int pinX, int pinY, int pinButton, int invert = 0)
   : _pinX(pinX),
     _pinY(pinY),
     _pinButton(pinButton),
+    _invert(invert),
     _x(512),
     _y(512),
     _button(false),
