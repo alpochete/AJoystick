@@ -7,7 +7,8 @@ AJoystick::AJoystick(int pinX, int pinY, int pinButton)
     _pinButton(pinButton),
     _x(512),
     _y(512),
-    _button(false) {}
+    _button(false),
+    _invert(false) {}
 
 void AJoystick::begin() {
   pinMode(_pinX, INPUT);
@@ -19,6 +20,11 @@ void AJoystick::update() {
   _x = analogRead(_pinX);
   _y = analogRead(_pinY);
 
+  if(_invert){
+    _y = abs(1023 - _y)
+    _x = abs(1023 - _y)
+  }
+  
   _button = !digitalRead(_pinButton);
 }
 
