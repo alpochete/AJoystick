@@ -15,9 +15,10 @@ private:
   int _y;
 
   bool _button;
+  bool _invert;
 
 public:
-  AJoystick(int pinX, int pinY, int pinButton);
+  AJoystick(int pinX, int pinY, int pinButton, int invert = 0);
 
   void begin();
   void update();
