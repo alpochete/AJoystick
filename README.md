@@ -9,6 +9,7 @@ An Arduino library for controlling and reading analog joystick modules.
 - Detect joystick directions (up, down, left, right).
 - Detect when the joystick is in the center.
 - Normalize axis values to custom ranges.
+- Optional axis inversion for modules mounted in different orientations.
 
 ## Installation
 
@@ -19,6 +20,7 @@ Then include the library in your sketch:
 ```cpp
 #include <AJoystick.h>
 ```
+
 ## Wiring
 
 | Joystick Pin | Arduino Pin |
@@ -29,7 +31,20 @@ Then include the library in your sketch:
 | VCC | 5V |
 | GND | GND |
 
+## Constructor
+
+```cpp
+AJoystick joystick(pinX, pinY, pinButton, invert);
+```
+
+- `pinX`: Analog pin for the X axis.
+- `pinY`: Analog pin for the Y axis.
+- `pinButton`: Digital pin for the button.
+- `invert`: Optional boolean value. Use `true` to invert both axis readings; use `false` or omit it for the default behavior.
+
 ## Basic Usage
+
+### Normal orientation
 
 ```cpp
 #include <AJoystick.h>
@@ -78,6 +93,14 @@ void loop() {
 }
 ```
 
+### Inverted orientation
+
+```cpp
+AJoystick joystick(PIN_X, PIN_Y, PIN_BUTTON, true);
+```
+
+When `invert` is `true`, the library reverses both axis values with `1023 - value`, so axis readings and directions follow the configured orientation.
+
 ## Available Methods
 
 | Method | Description |
@@ -100,10 +123,12 @@ void loop() {
 - Call `update()` before reading joystick values.
 - The button uses `INPUT_PULLUP`.
 - The button returns `true` when pressed.
-- Direction thresholds are currently fixed:
+- Direction thresholds are fixed:
   - Above 600: Up or Right.
   - Below 400: Down or Left.
   - Between 400 and 600: Center region.
+- The optional constructor parameter `invert` defaults to `false`.
+- `invert` should be enabled if the joystick module's physical orientation produces reversed X and Y readings.
 
 **Note:** Actual axis orientation may vary depending on the joystick module.
 
@@ -125,6 +150,3 @@ AJoystick/
 ## Version
 
 **1.0.2**
-
-
-
